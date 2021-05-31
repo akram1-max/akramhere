@@ -8,10 +8,8 @@
   href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
   rel="stylesheet"
 />
-<link
-  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
-  rel="stylesheet"
-/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 <style>
 /* Custom properties/variables  */
 :root {
@@ -84,7 +82,7 @@ html {
 /* Base styles */
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
@@ -93,13 +91,16 @@ body {
 
 h1,
 h2 {
-  font-family: 'Raleway', sans-serif;
+  
+   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   text-align: center;
+  
 }
 
 h1 {
   font-size: 6rem;
+  color: crimson;
 }
 
 h2 {
@@ -129,7 +130,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-red);
+  background: linear-gradient(45deg, red, blue);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
@@ -138,6 +139,7 @@ img {
   display: flex;
   margin-right: 2rem;
 }
+
 
 @media (max-width: 28.75em) {
   .nav {
@@ -156,7 +158,8 @@ img {
 }
 
 .nav-list a:hover {
-  background: var(--main-blue);
+  background: linear-gradient(45deg, blue, white);
+  transform: scale(1.1);
 }
 
 /* Welcome section */
@@ -169,7 +172,7 @@ img {
   width: 100%;
   height: 100vh;
   background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background-image: linear-gradient(55deg, #ccffff 10%, #ffffcc 90%);
 }
 
 .welcome-section > p {
@@ -193,6 +196,19 @@ img {
   border-bottom: 0.2rem solid var(--main-white);
 }
 
+/* certifications */
+.cert-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: linear-gradient(45deg, blue, red);
+  margin: auto;
+  
+}
+.cert-section-header {
+  max-width: 640px;
+  margin: auto auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
 @media (max-width: 28.75em) {
   .projects-section-header {
     font-size: 4rem;
@@ -200,6 +216,8 @@ img {
 }
 
 /* "Automagic" image grid using no media queries */
+.projects-section{
+background: linear-gradient(45deg, red, blue);}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -208,6 +226,7 @@ img {
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 6rem;
+  
 }
 
 @media (max-width: 30.625em) {
@@ -217,17 +236,18 @@ img {
 
   .projects-grid {
     grid-template-columns: 1fr;
+    
   }
 }
 
 .project {
-  background: var(--main-gray);
+  background: linear-gradient(45deg, black, gray);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 
 .code {
-  color: var(--main-gray);
+  color: white;
   transition: color 0.3s ease-out;
 }
 
@@ -274,6 +294,8 @@ img {
 
 /* Contact section */
 
+/* Contact section */
+
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -283,11 +305,12 @@ img {
   width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  background: var(--main-gray);
+  background: linear-gradient(45deg,red, blue);
 }
-
 .contact-section-header > h2 {
   font-size: 6rem;
+  
+  
 }
 
 @media (max-width: 28.75em) {
@@ -304,15 +327,17 @@ img {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 980px;
+  max-width: 1000px;
   margin-top: 4rem;
   flex-wrap: wrap;
+  justify-items:center;
 }
 
 .contact-details {
   font-size: 2.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
+  
 }
 
 .contact-details:hover {
@@ -345,6 +370,8 @@ footer i {
   }
 }
 
+
+
 </style>
 <!-- START NAV -->
 
@@ -352,6 +379,9 @@ footer i {
   <ul class="nav-list">
     <li>
       <a href="#welcome-section">About</a>
+    </li>
+     <li>
+      <a href="#certi">Certifications</a>
     </li>
     <li>
       <a href="#projects">Work</a>
@@ -367,11 +397,20 @@ footer i {
 <!-- START WELCOME SECTION -->
 
 <section id="welcome-section" class="welcome-section">
-  <h1>Hey I am Mimic</h1>
-  <p>a web developer</p>
+  <h1>Hey, Akram Syed here!</h1>
+  <p> Student </p>
 </section>
 
 <!-- END WELCOME SECTION -->
+
+<!-- START CERTIFICATION --->
+
+<section id="certi" class="cert-section">
+<h2 class="cert-section-header"> My Certifications </h2>
+<embed src="student-certificate.pdf" width="800px" height= "800px"/>
+</section>
+
+<!-- END CERTIFICATION -->
 
 <!-- START PROJECTS SECTION -->
 
@@ -380,164 +419,72 @@ footer i {
 
   <div class="projects-grid">
     <a
-      href="https://codepen.io/freeCodeCamp/full/zNqgVx"
+      href="https://codepen.io/akram1-max/pen/eYvEoMV?editors=1010"
       target="_blank"
       class="project project-tile"
     >
       <img
         class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+        src="https://inteng-storage.s3.amazonaws.com/img/iea/QlO7eAK67x/sizes/tesla-header_resize_md.jpg"
         alt="project"
       />
       <p class="project-title">
         <span class="code">&lt;</span>
-        Tribute Page
+        Tribute Page dedicated to Tesla
         <span class="code">&#47;&gt;</span>
       </p>
     </a>
     <a
-      href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
+      href="animateheart.herokuapp.com"
       target="_blank"
       class="project project-tile"
     >
       <img
         class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
+        src="https://images.pexels.com/photos/4197491/pexels-photo-4197491.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         alt="project"
       />
       <p class="project-title">
         <span class="code">&lt;</span>
-        Random Quote Machine
+        Heart-animate
         <span class="code">&#47;&gt;</span>
       </p>
     </a>
-    <a
-      href="https://codepen.io/freeCodeCamp/full/wgGVVX"
-      target="_blank"
-      class="project project-tile"
-    >
-      <img
-        class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
-        alt="project"
-      />
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        JavaScript Calculator
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
-    <a
-      href="https://codepen.io/freeCodeCamp/full/mVEJag"
-      target="_blank"
-      class="project project-tile"
-    >
-      <img
-        class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
-        alt="project"
-      />
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        Map Data Across the Globe
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
-    <a
-      href="https://codepen.io/freeCodeCamp/full/wGqEga"
-      target="_blank"
-      class="project project-tile"
-    >
-      <img
-        class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png"
-        alt="project"
-      />
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        Wikipedia Viewer
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
-    <a
-      href="https://codepen.io/freeCodeCamp/full/KzXQgy"
-      target="_blank"
-      class="project project-tile"
-    >
-      <img
-        class="project-image"
-        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
-        alt="project"
-      />
-      <p class="project-title">
-        <span class="code">&lt;</span>
-        Tic Tac Toe Game
-        <span class="code">&#47;&gt;</span>
-      </p>
-    </a>
-  </div>
-
-  <a
-    href="https://codepen.io/FreeCodeCamp/"
-    class="btn btn-show-all"
-    target="_blank"
-    >Show all<i class="fas fa-chevron-right"></i
-  ></a>
-</section>
+    </section>
 
 <!-- END PROJECTS SECTION -->
-
-<!-- START CONTACT SECTION -->
-
+<!-- contact BEGINS -->
 <section id="contact" class="contact-section">
-  <div class="contact-section-header">
+<div class="contact-section-header">
     <h2>Let's work together...</h2>
     <p>How do you take your coffee?</p>
   </div>
-  <div class="contact-links">
-    <a
-      href="https://facebook.com/freecodecamp"
-      target="_blank"
-      class="btn contact-details"
-      ><i class="fab fa-facebook-square"></i> Facebook</a
-    >
+<div class="contact-links">
+    
     <a
       id="profile-link"
-      href="https://github.com/freecodecamp"
+      href="https://github.com/akram1-max"
       target="_blank"
       class="btn contact-details"
       ><i class="fab fa-github"></i> GitHub</a
     >
-    <a
-      href="https://twitter.com/freecodecamp"
-      target="_blank"
-      class="btn contact-details"
-      ><i class="fab fa-twitter"></i> Twitter</a
-    >
-    <a href="mailto:example@example.com" class="btn contact-details"
+    
+    <a href="mailto:syedakram2002@gmail.com" class="btn contact-details"
       ><i class="fas fa-at"></i> Send a mail</a
     >
-    <a href="tel:555-555-5555" class="btn contact-details"
+    <a href="tel:+91-7558182176" class="btn contact-details"
       ><i class="fas fa-mobile-alt"></i> Call me</a
     >
   </div>
 </section>
+<!-- contact ENDS -->
 
-<!-- END CONTACT SECTION -->
-
-<!-- START FOOTER SECTION -->
 
 <footer>
   <p>
-    **This is just a fake portfolio. All the projects and contact details given
-    are not real.
+    Syed Akram A
   </p>
   <p>
-    &copy; Created for
-    <a href="https://www.freecodecamp.com/" target="_blank"
-      >freeCodeCamp <i class="fab fa-free-code-camp"></i
-    ></a>
+    &copy; Created by me, for me!
   </p>
 </footer>
-
-<!-- END FOOTER SECTION -->
